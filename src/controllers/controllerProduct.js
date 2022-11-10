@@ -80,25 +80,31 @@ const controller = {
             })
             .then(function(userOn){
                 const user = userOn
-                db.Product.findAll()
-                .then(function(productos){ 
+                let products = db.Product.findAll()
+                let categorias = db.Category.findAll()
+                Promise.all([products,categorias])
+                .then(function([productos,categories]){ 
                     res.render('productsList', {
                         titulo: 'Carta de bebidas',
                         enlace: '/css/productsList.css',
                         toThousand,
                         productos,
+                        categories,
                         user
                     })
                 })
             })
         }else{
-            db.Product.findAll()
-            .then(function(productos){ 
+            let products = db.Product.findAll()
+            let categorias = db.Category.findAll()
+            Promise.all([products,categorias])
+            .then(function([productos,categories]){ 
                 res.render('productsList', {
                     titulo: 'Carta de bebidas',
                     enlace: '/css/productsList.css',
                     toThousand,
-                    productos
+                    productos,
+                    categories
                 })
             })
         }

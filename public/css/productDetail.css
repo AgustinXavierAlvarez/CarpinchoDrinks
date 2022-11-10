@@ -56,14 +56,21 @@ span{
     margin-left:10px;
 }
 
-.producto{
-    width: 100%;
+main img{
+    width: 50%;
+    max-width: 700px;
+    min-width: 400px;
 }
 
 .main-producto{
-    padding: 10px;
     background-color:  #ffffff;
+    display: flex;
+    margin:2vw 10%;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .prod-descuento{
     margin-top: 5px;
@@ -100,7 +107,7 @@ span{
     cursor: pointer;
 }
 
-div.botones {
+div .botonera{
     display: flex;
     padding-left: 7px;
     margin-top: 10px;
