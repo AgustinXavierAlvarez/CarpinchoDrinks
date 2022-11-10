@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "name":"Cervezas"
+    },
+    {
+        "id":2,
+        "name":"Vinos"
+    },
+    {
+        "id":3,
+        "name":"Licores"
+    },
+    {
+        "id":4,
+        "name":"Espumantes"
+    }
+]

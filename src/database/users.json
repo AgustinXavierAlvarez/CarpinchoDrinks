@@ -1,0 +1,97 @@
+[
+ {
+  "id": 0,
+  "nombre-apellido": "Matías Coccaro",
+  "email": "maticoccaro@gmail.com",
+  "password": "3513131fqfqf3r1512rd14124123eqdr4124125123rddt3tr#af$fwfw5%"
+ },
+ {
+  "nombre-apellido": "agustin alvarez",
+  "email": "alvarezagustinx@gmail.com",
+  "password": "qweqweqwas",
+  "id": 1
+ },
+ {
+  "name": "Gonza",
+  "email": "gperezmdp@gmail.com",
+  "password": "$2a$10$tW70uHe31tpQUsnprJWCFO3j2b14z8UOvsmniKjXSfVMp.Ht6x5MG",
+  "id": "a1e59b5c-a0fb-4942-a70c-2d18045ae9da"
+ },
+ {
+  "name": "Mariano Di Pietro",
+  "email": "marianodp@gmail.com",
+  "password": "$2a$10$XCL05ZTc/SS1kirY.2Th.uPe7oJdhBElSxArEnU9W2e4ZmOF63qB6",
+  "id": "486b960f-2ec7-49e5-a733-700f4eed743c"
+ },
+ {
+  "name": "Manolo Rodriguez",
+  "email": "rodriguezm@gmail.com",
+  "password": "$2a$10$bsiHUxEekrct.f6AV4AxCu5tvpT1pJVtOR4.O4lLKpgHFyxAQ1EC2",
+  "id": "1120348d-90c7-4ef8-bd21-71c2197dc4ee"
+ },
+ {
+  "name": "Agustin",
+  "email": "lautarogil@live.com",
+  "password": "$2a$10$.0Q3WtfE3e9JfXtI8YxLw.qq0axbndErNNwJgAvIFZRDzrTOxqd1m",
+  "id": "62b7a436-8f44-4223-851d-e4ef98bfce30"
+ },
+ {
+  "name": "Amarula 1L",
+  "email": "alvarezagusnx@gmail.com",
+  "password": "$2a$10$3AlSUc2utYUeT63Gq3Q1dumwgdoNb33AyV2j.XVI1Szg3aovVehXK",
+  "id": "c322bbf4-508a-4d7f-a4a8-fa674721c900"
+ },
+ {
+  "user_name": "Mariano Girondo",
+  "user_email": "mgirondo@gmail.com",
+  "user_password": "12345",
+  "password": "$2a$10$PUVZ/s5gqf7KUjqoBH./pORqNZl6QDv0U72Gpjifa0Kt9l12zh60q",
+  "id": "22765873-c489-4ff6-8a6b-1cc7fa929fb9"
+ },
+ {
+  "user_name": "Ignacio Paruolo",
+  "user_email": "ignap@hotmail.com",
+  "user_password": "12345",
+  "password": "$2a$10$Jh85NT8R4iK7YexHsx9KD.mviiRy0l.3LBT.L/76tR.Iy946eflKG",
+  "id": "75c08b7d-862a-43ab-b3cb-15b26eb85c43"
+ },
+ {
+  "user_name": "Emilio Rodriguez",
+  "user_email": "emiliorod@hotmail.com",
+  "user_password": "$2a$10$lE.pqlHBh./bQjaqy45Mc.sZigdv2z0GYr89B7.dKNAG04hkpAB36",
+  "id": "a1d937c9-0977-43c4-9289-303644cc2118"
+ },
+ {
+  "user_name": "dad",
+  "user_email": "aw@fgafa",
+  "user_password": "$2a$10$ZEQnrK1l0oYyQ2S.Ac2cAe2BZFCdlDzKsrx/bjR.9b3saLX/hSXLK",
+  "id": "c9888baf-7bed-4c67-bc80-50d42f9efdfb"
+ },
+ {
+  "user_name": "da",
+  "user_email": "fafd@dawdwa",
+  "user_password": "$2a$10$tXxJy6emk4qzdZ7J1fvS9.6EckODMexrJj/tMfQgn57p.MpwSSqc6",
+  "id": "039f81f3-cd85-4ca9-b56e-2ec7188e99b0"
+ },
+ {
+  "user_name": "Gonzalo Perez",
+  "user_email": "gonzalop@gmail.com",
+  "user_password": "$2a$10$uDoTn8Q2kBDit3pXkjMj.OW625AfGq85ZgY/UtbWUkFmsL7EopRN.",
+  "user_img": "1663110098250_img.jpg",
+  "id": "039f81f3-cd85-4ca9-b56e-2ec7188e99b01"
+ },
+ {
+  "user_name": "Mariano Girondo",
+  "user_email": "legalesfc@gmail.com",
+  "user_password": "$2a$10$/rH9miRqYJmyZKZSN9BlPesA/an5SF2QanpqIsMbrWBIGeB2AQJoC",
+  "user_img": "1663111399707_img.jpg",
+  "id": "039f81f3-cd85-4ca9-b56e-2ec7188e99b011"
+ },
+ {
+  "user_name": "Juan María Cáceres",
+  "user_email": "juanma@hotmail.com",
+  "user_password": "$2a$10$o2E7MgPXeV5pd9SnBKF3HuUwk9WFTpn/iKlIzvgJI6Bl0pg2AWPIK",
+  "user_img": "1663709146161_img.jpg",
+  "id": "039f81f3-cd85-4ca9-b56e-2ec7188e99b0111"
+ }
+]

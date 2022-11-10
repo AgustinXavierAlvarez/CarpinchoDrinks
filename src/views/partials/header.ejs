@@ -1,0 +1,42 @@
+<header class="main-header">
+  <div class="container">
+    <div class="main-header-container">
+      <!-- LOGO -->
+      <h1 class="main-header-title"> <a href="/" class="enlace-titulo">CARPINCHO DRINKS</a></h1>
+      <!-- BURGER BUTTON -->
+      <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+      <!-- BARRA DE NAVEGACION -->
+      <nav class="main-nav" id="main-nav">
+        <ul class="menu" id="menu">
+          <li class="menu-item"><a href="/" class="menu-link">INICIO</a></li>
+          <li class="menu-item"><a href="/products" class="menu-link">PRODUCTOS</a></li>
+          <li class="menu-item"><a href="/#nosotros" class="menu-link">NOSOTROS</a></li>
+          <li class="menu-item"><a href="/#contacto" class="menu-link">CONTACTO</a></li>
+          <% if(locals.isLogged){ %>
+            <li class="menu-item"><a href="/user/register" class="menu-link">REGISTRO</a></li>
+            <% } %>
+              <% if(locals.user){ %>
+                <li class="menu-item"><a href="/user/logout" class="menu-link">CERRAR SESIÓN</a></li>
+                <% } %>
+        </ul>
+      </nav>
+    </div>
+    <!-- CARRITO Y BARRA DE BUSQUEDA -->
+    <div class="main-header-container">
+      <div class="main-header-user">
+        <% if(locals.user){ %>  
+        <a href="/user/profile" class="main-header-link"><img src="/image/avatars/<%= user.user_img%>" alt="avatar"><p class="main-header-link">Hola, <%= user.user_name%> </p></a>
+        <a href="/products/carrito" class="main-header-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+        <% } %>
+        <% if(!locals.user){ %>
+          <a href="/user/login" class="main-header-link"><img src="/image/avatars/1664421839976_img.jpg" alt="avatar"><p class="main-header-link">INGRESAR</p></a>
+          <a href="/user/login" class="main-header-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+          <% } %>
+      </div>
+      <form class="main-header-input" action="search" method="get">
+        <input type="search" name="search" class="main-header-input" placeholder="Buscar productos">
+      </form>
+    </div>
+  </div>
+  <hr>
+</header>

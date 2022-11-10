@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    font-family: 'Kanit', sans-serif;
+}
+
+img{
+    width: 40%;
+    box-shadow : 0px 0px 5px #e5e7e9;
+    margin:auto
+}
+
+main article{
+    color:black
+}
+
+.title-product{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px 0px;
+    text-align: center;
+    color: black;
+}
+
+.create-btn {
+    text-align: center;
+    width: 170px;
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 15px;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+p{
+    text-align: left;
+}
+
+.color{
+    color: #000000;
+    font-size: 15px;
+    font-weight: 300;
+    
+}
+
+.maschico{
+    width: 23%;
+}
+
+span{
+    margin-left:10px;
+}
+
+.producto{
+    width: 100%;
+}
+
+.main-producto{
+    padding: 10px;
+    background-color:  #ffffff;
+}
+
+.prod-descuento{
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.barra-precio{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 15px;
+    margin:auto
+}
+
+.barra-precio h2 {
+    font-size: 20px;
+}
+
+.barra-precio h2, p {
+    padding-bottom: 10px;
+}
+
+.boton-formulario, .boton-formulario-shop{
+    width: 45px;
+    background-color: rgba(30,30,30);
+    border: none;
+    margin-right: 5px;
+    font-size: 16px;
+    color:#FFF;
+    padding: 13px;
+    border-radius: 5px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+div.botones {
+    display: flex;
+    padding-left: 7px;
+    margin-top: 10px;
+}
+
+.products-title {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+}
+
+#id_producto{
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+
+    article.prod-contenedor {
+        width: 46%;
+    }
+
+    article.prod-contenedor {
+        box-shadow : 0px 0px 5px #e5e7e9;
+        border-radius: 10px;
+        width: 45%;
+        position: relative;
+        max-height: 100px;
+    }
+
+    article.img-producto {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .products-gral {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    .img-producto {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .barra-precio {
+        margin-top: 35px;
+    }
+
+    .barra-precio h2 {
+        font-size: 25px;;
+    }
+
+    .barra-precio p.color {
+        font-size: 17px;
+    }
+
+    div.botones {
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 1024px)  {
+
+    
+    
+
+
+    .boton-formulario {
+        cursor: pointer;
+    }
+
+    div.botones button:hover {
+        background-color: rgb(93, 92, 92);
+    }
+
+
+}
+
+

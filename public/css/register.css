@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.contenedor{
+    width: 100%;
+    padding:15px;
+}
+
+.main-register{
+    background-image:url("/image/slider2.jpg") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    padding:10px;
+    margin:auto;
+}
+
+.form-register{
+    text-align:-webkit-center;
+    padding-bottom: 20px;
+}
+
+.formulario{
+    background: white;
+    margin: 10% 0%;
+    padding:10px;
+    width: 100%;
+    border:0.5px solid #212121;
+    border-radius: 5px;
+}
+
+.register-title{
+    text-align: center;
+    color:#1a2537;
+    font-size:40px;
+}
+
+.input-register,
+textarea{
+    font-size: 20px;
+    width: 82%;
+    padding:10px;
+    border:none;
+    box-shadow: 1px 1px 2px rgba(57, 56, 56, 0.5);
+}
+
+textarea {
+    height: 150px;
+}
+
+input .contenedor{
+    margin-bottom: 15px;
+    border:1px solid #555;
+}
+
+.erroresLocales{
+    color:red;
+    font-size:15px;
+    padding:5px;
+}
+
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color:#999
+}
+
+.etiqueta{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.button{
+    border:none;
+    width: 100%;
+    margin-top: 15px;
+    color:white;
+    font-size: 20px;
+    background:rgba(30,30,30);
+    padding:15px 20px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background:rgba(30,30,30,0.4);
+}
+
+.etiqueta{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.link{
+    text-decoration: none;
+    color:black;
+    font-weight: 600px;
+}
+
+.link:hover {
+    color:rgb(193, 192, 192)
+}
+
+.register-error {
+    color:red
+}
+
+
+@media (min-width:768px){
+
+    .formulario{
+        width: 500px;
+        border-radius:5px;
+    }
+
+}

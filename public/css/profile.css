@@ -1,0 +1,43 @@
+.div-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.profile-title {
+    font-size: 20px;
+    margin: 25px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.div-profile p {
+    margin-bottom: 10px;
+}
+
+.div-profile img {
+    max-width: 70%;
+    border-radius:3%;
+}
+
+.perfil-button{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    max-width:75%;
+    margin:auto;
+}
+
+.perfil-button a {
+    font-size:13px;
+    display: block;
+    margin: 40px auto 0 auto;
+    padding: 3px 5px;
+    background-color: rgba(30, 30, 30);
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
