@@ -179,16 +179,22 @@ const controller = {
     },
     edit: (req, res) => {
         const usuario = req.session.userLogged
+        let paramsId= req.params.id
         console.log(usuario);
         if (usuario) {
-            db.User.findOne({
-                where: { id: usuario.id }
+            let userEdit = db.User.findOne({
+                where: { id: paramsId}
             })
-                .then(function (user) {
+            let userOn= db.User.findOne({
+                where: { id: usuario.id}
+            })
+            Promise.all([userOn,userEdit])
+            .then(function ([user,usuario]) {
                     res.render('edit-user', {
                         titulo: 'Edicion de usuario',
                         enlace: '/css/editUser.css',
-                        user
+                        user,
+                        usuario
                     })
                 })
         }

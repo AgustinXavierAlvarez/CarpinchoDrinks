@@ -6,10 +6,10 @@
 
         <main class="main">
             <div class="form-edit">
-                <% if(locals.user && user.id && user.user_name){ %>
-                    <form action="/user/actualizar/<%= user.id %>?_method=PUT" method="POST"
+                <% if(locals.usuario && usuario.id && usuario.user_name){ %>
+                    <form action="/user/actualizar/<%= usuario.id %>?_method=PUT" method="POST"
                     enctype='multipart/form-data' class="formulario">
-                        <h1>Formulario de edición del usuario: <%= user.user_name %>
+                        <h1>Formulario de edición del usuario: <%= usuario.user_name %>
                     </h1>
                 <% } %>
                 <div id="ulErrors">
@@ -18,9 +18,9 @@
                 <div class="contenedor">
                     <p class="etiqueta">Nombre y apellido</p>
                     <i class="fa-solid fa-user icon"></i>
-                    <% if(locals.user && user.user_name){ %>
+                    <% if(locals.usuario && usuario.user_name){ %>
                         <input type="text" name="user_name" id="user_name"
-                        value="<%= user.user_name %>">
+                        value="<%= usuario.user_name %>">
                     <% } %>
                     <% if(locals.errors && errors.user_name){ %>
                         <p class="erroresLocales">
@@ -31,9 +31,9 @@
                 <div class="contenedor">
                     <p class="etiqueta">Correo electrónico</p>
                     <i class="fa-solid fa-key icon"></i>
-                    <% if(locals.user && user.user_email){ %>
+                    <% if(locals.usuario && usuario.user_email){ %>
                         <input type="email" id="user_email" name="user_email"
-                        value="<%= user.user_email %>">
+                        value="<%= usuario.user_email %>">
                     <% } %>
                     <% if(locals.errors && errors.user_email){ %>
                         <p class="erroresLocales">

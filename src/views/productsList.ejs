@@ -10,13 +10,14 @@
                     <div>
                         <ul type="none" id="categories">
                             <% categories.forEach(function(element){%>
-                                <li><%= element.cat_name%> <input type="checkbox" name="" class="filtros"></li>
+                                <li><%= element.cat_name%><input type="checkbox" name="" class="filtros"></li>
                             <% }) %>
                         </ul>
                     </div>
                     <div class="productos">
                         <% productos.forEach(function(element){ %>
                             <article class="producto">
+                                <input type="number" class="category-drink" display="none" value="<%=element.cat_id%>">
                                 <a class="hipervinculo-productos" href="/products/detail/<%= element.id%>">
                                     <img src="/image/<%= element.img %>">
                                     <div class="contenedor-articulo">
