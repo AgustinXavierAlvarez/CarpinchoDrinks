@@ -12,27 +12,33 @@ const controller={
     home: (req, res)=>{
         const usuario=req.session.userLogged
         if(usuario){
+            let cats= db.Category.findAll()
             let prods= db.Product.findAll()
             let userOn=db.User.findOne({
                 where:{id:usuario.id}
             })
-            Promise.all([prods,userOn])
-            .then(function([productos,user]){
+            Promise.all([prods,userOn,cats])
+            .then(function([productos,user,categories]){
                 res.render('index', {
                     titulo:'Carpincho Drinks',
                     enlace:'/css/index.css',
                     user,
+                    categories,
                     productos
                 });
             })
         }
         else{
-            db.Product.findAll()
-            .then(function(productos){
-            res.render('index', {
-                titulo:'Carpincho Drinks',
-                enlace:'/css/index.css',
-                productos
+            let cats= db.Category.findAll()
+            
+            let prods= db.Product.findAll()
+            Promise.all([prods,cats])
+            .then(function([productos,categories]){
+                res.render('index', {
+                    titulo:'Carpincho Drinks',
+                    enlace:'/css/index.css',
+                    productos,
+                    categories
             })
         })
         }

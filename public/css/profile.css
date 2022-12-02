@@ -1,9 +1,22 @@
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-profile{
+    margin: 0vw 4vw;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border:black solid 2px;
+}
+
 .div-profile{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin: auto;
+    width: 50%;
+
 }
 
 .profile-title {
@@ -19,20 +32,21 @@
 }
 
 .div-profile img {
-    max-width: 70%;
+    width: 90%;
     border-radius:3%;
 }
 
 .perfil-button{
     display:flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content:center;
     max-width:75%;
-    margin:auto;
+  
 }
 
 .perfil-button a {
     font-size:13px;
+    width: 100%;
     display: block;
     margin: 40px auto 0 auto;
     padding: 3px 5px;

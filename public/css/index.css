@@ -76,7 +76,7 @@
 
 section article.producto {
     margin: 15px;
-    box-shadow: 0px 0px 5px #e5e7e9;
+    box-shadow: 0px 0px 5px #919599;
 }
 
 div p.precio {
@@ -133,6 +133,7 @@ section article div.contenedor-articulo {
 
 section article {
     transition: all 800ms;
+    flex-wrap: wrap;
 }
 
 section article:hover {
@@ -147,14 +148,15 @@ section article:hover i {
 .productos {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
 }
 
 section.producto {
     width: 60%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    
 }
 
 /* Media Queries */
