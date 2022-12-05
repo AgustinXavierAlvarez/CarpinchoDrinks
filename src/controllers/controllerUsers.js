@@ -199,6 +199,37 @@ const controller = {
                 })
         }
     },
+    editSucces: (req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            console.log(errors)
+            db.User.findOne({
+                where: { id: usuario.id }
+            })
+                .then(function (user) {
+                    res.render('edit-user', {
+                        titulo: 'Edicion de usuario',
+                        enlace: '/css/editUser.css',
+                        errors: errors.mapped(),
+                        old: req.body,
+                        user
+                    });
+                })
+        }
+        else {
+            db.User.update(
+                {
+                    user_name: req.body.user_name,
+                    user_email: req.body.user_email
+                },
+                {
+                    where: { id: req.params.id }
+                })
+                .then(function () {
+                    res.redirect('/user/profile')
+                })
+        }
+    },
 
     editImg:(req,res)=>{
         const usuario = req.session.userLogged
@@ -223,7 +254,7 @@ const controller = {
         }
     },
 
-    editSucces: (req, res) => {
+    imgEditSucces: (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             console.log(errors)
@@ -243,8 +274,6 @@ const controller = {
         else {
             db.User.update(
                 {
-                    user_name: req.body.user_name,
-                    user_email: req.body.user_email,
                     user_img: req.file.filename
                 },
                 {
@@ -255,6 +284,7 @@ const controller = {
                 })
         }
     },
+
 
     changePassword:(req,res)=>{
         const usuario = req.session.userLogged

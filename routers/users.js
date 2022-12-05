@@ -42,10 +42,18 @@ router.get("/profile", autentificacion, userController.profile)
 // Vista de edición de usuario
 router.get('/edit/:id',userController.edit)
 
-router.get('/editImg/:id',uploadFile.single('user_img'),userController.editImg)
+router.get('/imgEdit/:id',userController.editImg)
+
+router.get('/changePassword/:id',userController.changePassword)
 
 // Procesa la edición del usuario
 router.put('/actualizar/:id', uploadFile.single('user_img'), validationsEdit,userController.editSucces)
+
+router.put('/passwordActualizar/:id',userController.changePasswordSucces);
+
+router.put('/imgEditSucces/:id',uploadFile.single('user_img'),userController.imgEditSucces);
+
+
 // Cierra la sesión del usuario
 router.get('/logout', userController.logout)
 // Desde el perfil del usuario administrador, acccede a la lista de usuarios registrados
@@ -53,8 +61,6 @@ router.get('/userslist', userController.usersList)
 // Borra el usuario seleccionado
 router.delete('/delete/:id', userController.destroy); 
 
-router.get('/changePassword/:id',userController.changePassword)
 
-router.put('/actualizarPassword/:id',userController.changePasswordSucces)
 
 module.exports = router;

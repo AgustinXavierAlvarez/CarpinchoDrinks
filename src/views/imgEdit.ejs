@@ -7,7 +7,7 @@
         <main class="main">
             <div class="form-edit">
                 <% if(locals.usuario && usuario.id && usuario.user_name){ %>
-                    <form action="/user/actualizar/<%= usuario.id %>?_method=PUT" method="POST"
+                    <form action="/user/imgEditSucces/<%= usuario.id %>?_method=PUT" method="POST"
                     enctype='multipart/form-data' class="formulario">
                         <h1>Ingrese la foto que desea cambiar</h1>
                 <% } %>
