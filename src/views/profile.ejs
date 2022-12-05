@@ -18,7 +18,8 @@
                         <a href="/user/editImg/<%= user.id %>">Cambiar foto</a>
                     </div>
                     <div class="perfil-button">
-                        <a href='/'>Inicio</a>
+                        <a href="/">Inicio</a>
+                        <a href="/user/changePassword/<%= user.id %>">Cambiar Contraseña</a>
                         <a href="/user/edit/<%= user.id %>">Editar usuario</a>
                         <% if(locals.user && user.user_cat==2){ %>
                             <a href="/products/create">Crear productos</a>
