@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+    <%- include('partials/header')%>
+
+        <main class="main">
+            <div class="form-edit">
+                <% if(locals.usuario && usuario.id && usuario.user_name){ %>
+                    <form action="/user/actualizar/<%= usuario.id %>?_method=PUT" method="POST"
+                    enctype='multipart/form-data' class="formulario">
+                        <h1>Ingrese la foto que desea cambiar</h1>
+                <% } %>
+                <div id="ulErrors">
+                    <ul type="none"></ul>
+                </div>
+                <div class="contenedor">
+                    <p class="etiqueta">Imagen de perfil</p>
+                    <i class="fa-regular fa-image icon"></i>
+                    <input type="file" name="user_img" accept=".jpg, .png, .jpng"
+                    class="input-register">
+                    <% if(locals.errors && errors.user_img){ %>
+                        <p class="erroresLocales">
+                            <%= errors.user_img.msg %>
+                        </p>
+                    <% } %>
+                </div>
+                <button type="submit" id='button-create' class="button">Editar usuario</button>
+            </form>
+        </main>
+        <%- include('partials/footer') %>
+</html>

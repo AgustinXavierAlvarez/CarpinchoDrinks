@@ -41,6 +41,9 @@ router.post("/login", validationLogin, userController.loginSucces)
 router.get("/profile", autentificacion, userController.profile)
 // Vista de edición de usuario
 router.get('/edit/:id',userController.edit)
+
+router.get('/editImg/:id',uploadFile.single('user_img'),userController.editImg)
+
 // Procesa la edición del usuario
 router.put('/actualizar/:id', uploadFile.single('user_img'), validationsEdit,userController.editSucces)
 // Cierra la sesión del usuario

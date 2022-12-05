@@ -199,6 +199,30 @@ const controller = {
                 })
         }
     },
+
+    editImg:(req,res)=>{
+        const usuario = req.session.userLogged
+        let paramsId= req.params.id
+        console.log(usuario);
+        if (usuario) {
+            let userEdit = db.User.findOne({
+                where: { id: paramsId}
+            })
+            let userOn= db.User.findOne({
+                where: { id: usuario.id}
+            })
+            Promise.all([userOn,userEdit])
+            .then(function ([user,usuario]) {
+                    res.render('imgEdit', {
+                        titulo: 'Cambio de foto',
+                        enlace: '/css/editUser.css',
+                        user,
+                        usuario
+                    })
+                })
+        }
+    },
+
     editSucces: (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {

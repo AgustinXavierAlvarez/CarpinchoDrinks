@@ -41,17 +41,6 @@
                         </p>
                     <% } %>
                 </div>
-                <div class="contenedor">
-                    <p class="etiqueta">Imagen de perfil</p>
-                    <i class="fa-regular fa-image icon"></i>
-                    <input type="file" name="user_img" accept=".jpg, .png, .jpng"
-                    class="input-register">
-                    <% if(locals.errors && errors.user_img){ %>
-                        <p class="erroresLocales">
-                            <%= errors.user_img.msg %>
-                        </p>
-                    <% } %>
-                </div>
                 <button type="submit" id='button-create' class="button">Editar usuario</button>
             </form>
         <%- include('partials/footer')%>
