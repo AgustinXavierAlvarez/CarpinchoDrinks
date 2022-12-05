@@ -50,4 +50,8 @@ router.get('/userslist', userController.usersList)
 // Borra el usuario seleccionado
 router.delete('/delete/:id', userController.destroy); 
 
+router.get('/changePassword/:id',userController.changePassword)
+
+router.put('/actualizarPassword/:id',userController.changePasswordSucces)
+
 module.exports = router;
