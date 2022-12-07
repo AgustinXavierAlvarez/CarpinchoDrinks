@@ -21,6 +21,8 @@ const autentificacion=require('../src/middlewares/auth')
 
 const userOn = require('../src/middlewares/userConnected')
 
+const validationImg = require('../src/middlewares/validationImg')
+
 
 
 
@@ -29,7 +31,7 @@ const userOn = require('../src/middlewares/userConnected')
 router.get("/register", userOn, userController.register)
 
 // Procesar el registro
-router.post("/register", uploadFile.single('user_img'), validationsRegister, userController.store)
+router.post("/register", uploadFile.single('user_img'),validationImg, validationsRegister, userController.store)
 
 // Formulario de Login
 router.get("/login", userOn, userController.login)
@@ -40,18 +42,18 @@ router.post("/login", validationLogin, userController.loginSucces)
 // Perfil de usuario
 router.get("/profile", autentificacion, userController.profile)
 // Vista de edición de usuario
-router.get('/edit/:id',userController.edit)
+router.get('/edit/:id', autentificacion,userController.edit)
 
-router.get('/imgEdit/:id',userController.editImg)
+router.get('/imgEdit/:id', autentificacion,userController.editImg)
 
-router.get('/changePassword/:id',userController.changePassword)
+router.get('/changePassword/:id', autentificacion,userController.changePassword)
 
 // Procesa la edición del usuario
-router.put('/actualizar/:id', uploadFile.single('user_img'), validationsEdit,userController.editSucces)
+router.put('/actualizar/:id', validationsEdit,userController.editSucces)
 
-router.put('/passwordActualizar/:id',userController.changePasswordSucces);
+router.put('/passwordActualizar</:id',userController.changePasswordSucces);
 
-router.put('/imgEditSucces/:id',uploadFile.single('user_img'),userController.imgEditSucces);
+router.put('/imgEditSucces/:id',uploadFile.single('user_img'),validationImg,userController.imgEditSucces);
 
 
 // Cierra la sesión del usuario

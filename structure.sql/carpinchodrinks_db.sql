@@ -21,7 +21,8 @@ CREATE TABLE `users` (
   `user_email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `user_password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `user_img` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `user_cat` int(10) unsigned NOT NULL, 
+  `user_cat` int(10) unsigned NOT NULL,
+  `user_status` int(10) unsigned NOT NULL
   PRIMARY KEY (`id`),
   KEY `users_user_cat_foreign` (`user_cat`),
   CONSTRAINT `users_user_cat_foreign` FOREIGN KEY (`user_cat`) REFERENCES users_categories (`id`)

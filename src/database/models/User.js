@@ -21,6 +21,9 @@ module.exports= function(sequelize, dataTypes){
         },
         user_cat:{
             type: dataTypes.INTEGER(10)
+        },
+        user_status:{
+            type:dataTypes.INTEGER(10)
         }
     }
 
