@@ -60,7 +60,10 @@ router.put('/imgEditSucces/:id',uploadFile.single('user_img'),validationImg,user
 router.get('/logout', userController.logout)
 // Desde el perfil del usuario administrador, acccede a la lista de usuarios registrados
 router.get('/userslist', userController.usersList)
+
 // Borra el usuario seleccionado
+router.put('/statusDelete/:id',userController.statusDelete);
+
 router.delete('/delete/:id', userController.destroy); 
 
 

@@ -100,6 +100,8 @@ const controller = {
 
     },
     loginSucces: (req, res) => {
+        console.log(req.body);
+        console.log(validationResult(req));
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             res.render('login', {
@@ -412,6 +414,40 @@ const controller = {
             })
         }
     },
+
+    statusDelete:(req,res)=>{
+        let paramsId = req.params.id
+        db.User.findOne({
+            where:{id:paramsId}
+        })
+        .then(function(user) {
+            if(user.user_status==1){
+                db.User.update(
+                    {
+                        user_status: 0
+                    },
+                    {
+                        where: { id: paramsId }
+                    })
+                    .then(function () {
+                        res.redirect('/user/profile')
+                    })
+            }
+            else{
+                db.User.update(
+                    {
+                        user_status: 1
+                    },
+                    {
+                        where: { id: paramsId }
+                    })
+                    .then(function () {
+                        res.redirect('/user/profile')
+                    })
+            }
+        })
+    },
+
     destroy: (req, res) => {
         db.User.destroy({
             where: { id:req.params.id }

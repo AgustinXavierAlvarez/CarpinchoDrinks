@@ -9,29 +9,42 @@
                 <section>
                     <div class="usuarios">
                         <% usuarios.forEach(function(element){ %>
-                            <article class="usuario">
-                                <div class="hipervinculo-usuarios">
-                                    <img src="/image/avatars/<%= element.user_img%>">
-                                    <div class="contenedor-articulo">
-                                        <p class="nombre_usuario">
-                                            <%= element.user_name %>
-                                        </p>
-                                        <p class="nombre_usuario">
-                                            <%= element.user_email %>
-                                        </p>
-                                        <div class="botones">
-                                            <a href="/user/edit/<%= element.id %>">
-                                                <button type="submit" class="boton-formulario"><i
-                                                        class="fas fa-edit"></i></button>
-                                                </a>
-                                            <form action="/user/delete/<%= element.id %>?_method=DELETE" method="POST">
-                                                <button type="submit" class="boton-formulario"><i
-                                                        class="fas fa-trash-alt"></i></button>
-                                            </form>
+                                <%if(user.id!=element.id){%>
+                                    <article class="usuario">
+                                        <div class="hipervinculo-usuarios">
+                                            <img src="/image/avatars/<%= element.user_img%>">
+                                            <div class="contenedor-articulo">
+                                                <p class="nombre_usuario">
+                                                    <%= element.user_name %>
+                                                </p>
+                                                <p class="nombre_usuario">
+                                                    <%= element.user_email %>
+                                                </p>
+                                                <div class="botones">
+                                                    <a href="/user/edit/<%= element.id %>">
+                                                        <button type="submit" class="boton-formulario"><i
+                                                                class="fas fa-edit"></i></button>
+                                                        </a>
+                                                    <form action="/user/delete/<%= element.id %>?_method=DELETE" method="POST">
+                                                        <button type="submit" class="boton-formulario"><i
+                                                                class="fas fa-trash-alt"></i></button>
+                                                    </form>
+                                                    <% if(element.user_status==1){ %>
+                                                        <form action="/user/statusDelete/<%= element.id %>?_method=PUT" method="post">
+                                                            <button type="submit" class="boton-formulario"><i class="fa-solid fa-user-plus"></i></button>
+                                                        </form>
+
+                                                        <h5>Usuario suspendido</h6>
+                                                    <% }else{ %>
+                                                        <form action="/user/statusDelete/<%= element.id %>?_method=PUT" method="post">
+                                                            <button type="submit" class="boton-formulario"><i class="fa-sharp fa-solid fa-user-minus"></i></button>
+                                                        </form>
+                                                    <% } %>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </article>
+                                    </article>
+                                <%}%>
                             <%})%>
                     </div>
                 </section>
