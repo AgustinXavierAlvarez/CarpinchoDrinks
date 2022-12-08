@@ -6,7 +6,12 @@
                 <div class="login-form">
                     <form class="formulario" action="/user/login" method="POST">
                         <h1 class="login-title">Ingresá a tu cuenta</h1>
-                        // agregar el status aca
+                        <input type="number" style="display:none" name="user_status">
+                        <% if(locals.errors && errors.user_status) { %>
+                            <p class="erroresLocales">
+                                <%= errors.user_status.msg %>
+                            </p>
+                        <% } %>
                         <div class="contenedor">
                             <p class="etiqueta">Correo electrónico</p>
                             <i class="fa-solid fa-at icon"></i>
@@ -16,7 +21,7 @@
                                 <p class="erroresLocales">
                                     <%= errors.user_email.msg %>
                                 </p>
-                                <% } %>
+                            <% } %>
                         </div>
                         <div class="contenedor">
                             <p class="etiqueta">Contraseña</p>

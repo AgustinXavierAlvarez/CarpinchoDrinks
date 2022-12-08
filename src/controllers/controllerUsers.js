@@ -117,8 +117,9 @@ const controller = {
                     user_email: req.body.user_email
                 }
             })
-                .then(function (usuario) {
-                    if (usuario) {
+            .then(function (usuario) {
+                if (usuario) {
+                    if(usuario.user_status==0){
                         let check = bcrypt.compareSync(req.body.user_password, usuario.user_password)
                         if (check) {
                             if (req.body.rememberUser) {
@@ -138,24 +139,35 @@ const controller = {
                             });
                         }
                     }
-                    else {
+                    else{
                         res.render('login', {
                             titulo: "login",
                             enlace: "/css/login.css",
                             errors: {
-                                user_email: { msg: 'El email ingresado no se encuentra registrado' }
+                                user_status: { msg: 'El usuario con esta cuenta se encuentra suspendido por tiempo indefinido' }
                             },
                             old: req.body
                         });
                     }
+                }
+                else {
+                    res.render('login', {
+                        titulo: "login",
+                        enlace: "/css/login.css",
+                        errors: {
+                            user_email: { msg: 'El email ingresado no se encuentra registrado' }
+                        },
+                        old: req.body
+                    });
+                }
+            })
+            .catch(function (e) {
+                console.log('llegue aca');
+                res.render('error', {
+                    titulo: '404',
+                    enlace: 'css/error.css'
                 })
-                .catch(function (e) {
-                    console.log('llegue aca');
-                    res.render('error', {
-                        titulo: '404',
-                        enlace: 'css/error.css'
-                    })
-                })
+            })
         }
     },
     profile: (req, res) => {
