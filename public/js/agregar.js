@@ -6,12 +6,17 @@ window.onload = function() {
         let url = window.location.href.split("/");
         
         let id = url [url.length -1]
-
-        let imagen = document.querySelector('.producto img').getAttribute("src")
-        let tituloProd = document.querySelector('.producto h1').innerText
-        let precio = document.querySelector('.precio').innerText
-        let descuento = document.querySelector('.descuento').innerText
+        console.log(id);
+        let imagen = document.querySelector('.producto img')
+        let tituloProd = document.getElementsByClassName('title-product')
+        let precio = document.querySelector('.precio')
+        let descuento = document.querySelector('.descuento')
         let inputCantidad = document.querySelector('#count').value
+        console.log(tituloProd[0].innerHTML);
+        //llegue hasta aca
+        console.log(precio);
+        console.log(descuento);
+        console.log(inputCantidad);
 
         let producto = {
             idProducto: id, 
