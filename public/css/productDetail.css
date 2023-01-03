@@ -94,21 +94,46 @@ main img{
     padding-bottom: 10px;
 }
 
-.boton-formulario, .boton-formulario-shop{
-    width: 45px;
+
+ .boton-formulario-shop{
+    width: 60%;
     background-color: rgba(30,30,30);
     border: none;
-    margin-right: 5px;
-    font-size: 16px;
-    color:#FFF;
-    padding: 13px;
+    padding: 1.2vw;
     border-radius: 5px;
-    justify-content: center;
-    cursor: pointer;
+    text-align: center;
+    margin: 0vw 2vw;
+}
+
+.boton-formulario-shop button{
+color: #ffffff;
+    
+}
+.boton-formulario-shop button{
+    background-color:rgb(30,30,30);
+    border: none;
+}
+.boton-formulario{
+    text-align: center;
+}
+
+#form-compra{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#from-compra-quantity{
+    width: 100%;
+    margin: 2vw;
+    display: flex;
+    justify-content: space-between;
 }
 
 div .botonera{
     display: flex;
+    justify-content: space-between;
     padding-left: 7px;
     margin-top: 10px;
 }

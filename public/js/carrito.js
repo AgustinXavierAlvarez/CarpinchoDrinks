@@ -18,27 +18,31 @@ window.onload = function () {
                   </form>
                   <div class="img-cart"><img src=${producto.imagen} alt=""> </div>
                   <div class="descripcion-cart">${producto.tituloProd}</div>
-                  <div class="precio-cart">$ ${toThousand(producto.precio)}</div>
+                  <input id="count" value=${producto.inputCantidad} type="text">
+                  <div class="precio-cart">$ ${producto.precio*producto.inputCantidad}</div>
               </article>
-              <article class="cant-cart">
-                  <form action="#" method="GET">
-                      <label for="cantidad"></label>
-                      <input id="count" value=${producto.inputCantidad} type="text">
-                  </form>
-              </article>
+
           </section>`;
   
         div.innerHTML += contenido;
       }
     }
-  
     let h3 = document.querySelector("#precioTotal")
-    let totalCarrito = localStorage.totalCarrito
-    if(typeof localStorage.totalCarrito == 'undefined'){
+    let total=0
+    let carrito = undefined
+    if(localStorage.carrito){
+      carrito = JSON.parse(localStorage.carrito);
+      carrito.forEach(producto => {
+        total=total+(producto.precio*producto.inputCantidad)
+      });
+    }
+    console.log(carrito);
+    
+    if(carrito== undefined){
       let contenido2 = `0`
       h3.innerHTML += contenido2
     } else {
-      let contenido2 = `${toThousand(totalCarrito)}`
+      let contenido2 = `${toThousand(total)}`
       h3.innerHTML += contenido2
     }
   

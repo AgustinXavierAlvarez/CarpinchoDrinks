@@ -19,6 +19,7 @@ const controller={
             })
             Promise.all([prods,userOn,cats])
             .then(function([productos,user,categories]){
+                
                 res.render('index', {
                     titulo:'Carpincho Drinks',
                     enlace:'/css/index.css',

@@ -7,7 +7,6 @@ main {
 .checkout-cart {
     display: flex;
     flex-grow: 1;
-    padding: 15px;
 }
 
 .descripcion-cart {
@@ -18,7 +17,9 @@ main {
 .item-cart {
     display: flex;
     flex-grow: 0.8;
-    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .precio-cart {

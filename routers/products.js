@@ -30,8 +30,10 @@ router.put('/actualizar/:id', validacionImg.single('img'), validationProduct, pr
 // Borrado de producto (D)
 router.delete('/delete/:id', productController.destroy); 
 
+// Ventas de producto (D)
 
 router.get('/carrito', productController.carrito);
 
+router.post('/carrito', productController.carrito);
 
 module.exports= router;

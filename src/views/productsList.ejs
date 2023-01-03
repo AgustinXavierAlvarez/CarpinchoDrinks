@@ -26,8 +26,8 @@
                                         </p>
                                         <i class="fa-solid fa-cart-shopping"></i>
                                         <div class="precio_descripcion">
-                                            <p class="precio"> $<%= element.price %>
-                                            </p>
+                                            <p class="precio"><%= element.price %></p>
+                                            <p class="precio-desc"><%= element.discount %></p>
                                         </div>
                                     </div>
                                 </a>
@@ -38,6 +38,7 @@
             </main>
             <%- include('partials/footer') %>
             <script src="/js/list.js"></script>
+            <script src="/js/producto.js"></script>
     </body>
 
 </html>
